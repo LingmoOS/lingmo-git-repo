@@ -296,7 +296,7 @@ class _XmlSubmanifest:
         # method, so that we can correctly create our repo_client.
         manifestFile = parent.SubmanifestInfoDir(
             os.path.join(parent.path_prefix, self.relpath),
-            os.path.join("manifests", manifestName or "default.xml"),
+            os.path.join("manifests", manifestName or "manifest.xml"),
         )
         linkFile = parent.SubmanifestInfoDir(
             os.path.join(parent.path_prefix, self.relpath), MANIFEST_FILE_NAME
@@ -342,7 +342,7 @@ class _XmlSubmanifest:
             manifestUrl = remote.ToRemoteSpec(self.project).url
         else:
             manifestUrl = mp.GetRemote().url
-        manifestName = self.manifestName or "default.xml"
+        manifestName = self.manifestName or "manifest.xml"
         revision = self.revision or self.name
         path = self.path or revision.split("/")[-1]
         groups = self.groups or []

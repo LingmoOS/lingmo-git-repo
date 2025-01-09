@@ -4249,7 +4249,7 @@ class ManifestProject(MetaProject):
         current_branch_only=False,
         git_event_log=None,
         platform="",
-        manifest_name="default.xml",
+        manifest_name="manifest.xml",
         tags="",
         this_manifest_only=False,
         outer_manifest=True,
@@ -4605,7 +4605,7 @@ class ManifestProject(MetaProject):
 
         elif is_new:
             # This is a new standalone manifest.
-            manifest_name = "default.xml"
+            manifest_name = "manifest.xml"
             manifest_data = fetch.fetch_file(manifest_url, verbose=verbose)
             dest = os.path.join(self.worktree, manifest_name)
             os.makedirs(os.path.dirname(dest), exist_ok=True)

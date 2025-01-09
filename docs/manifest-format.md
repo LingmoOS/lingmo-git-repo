@@ -5,7 +5,7 @@ the directories that are visible and where they should be obtained
 from with git.
 
 The basic structure of a manifest is a bare Git repository holding
-a single `default.xml` XML file in the top level directory.
+a single `manifest.xml` XML file in the top level directory.
 
 Manifests are inherently version controlled, since they are kept
 within a Git repository.  Updates to manifests are automatically
@@ -16,7 +16,7 @@ obtained by clients during `repo sync`.
 
 ## XML File Format
 
-A manifest XML file (e.g. `default.xml`) roughly conforms to the
+A manifest XML file (e.g. `manifest.xml`) roughly conforms to the
 following DTD:
 
 ```xml
@@ -292,7 +292,7 @@ Projects from a submanifest and its submanifests are added to the
 submanifest::path:<path_prefix> group.
 
 Attribute `manifest-name`: The manifest filename in the manifest project.  If
-not supplied, `default.xml` is used.
+not supplied, `manifest.xml` is used.
 
 Attribute `revision`: Name of a Git branch (e.g. "main" or "refs/heads/main"),
 tag (e.g. "refs/tags/stable"), or a commit hash.  If not supplied, `name` is

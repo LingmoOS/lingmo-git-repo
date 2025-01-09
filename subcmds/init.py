@@ -57,7 +57,7 @@ provided to --manifest-branch (or -b), to specify the name of the git ref in
 which the commit can be found.
 
 The optional -m argument can be used to specify an alternate manifest
-to be used. If no manifest is specified, the manifest default.xml
+to be used. If no manifest is specified, the manifest manifest.xml
 will be used.
 
 If the --standalone-manifest argument is set, the manifest will be downloaded
@@ -315,7 +315,7 @@ to update the working directory files.
             )
 
         if opt.standalone_manifest and (
-            opt.manifest_branch or opt.manifest_name != "default.xml"
+            opt.manifest_branch or opt.manifest_name != "manifest.xml"
         ):
             self.OptionParser.error(
                 "--manifest-branch and --manifest-name cannot"

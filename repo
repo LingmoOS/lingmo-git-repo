@@ -286,7 +286,7 @@ def InitParser(parser):
     group.add_option(
         "-m",
         "--manifest-name",
-        default="default.xml",
+        default="manifest.xml",
         help="initial manifest file",
         metavar="NAME.xml",
     )

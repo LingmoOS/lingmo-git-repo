@@ -84,7 +84,7 @@ A repo manifest describes the structure of a repo client; that is the
 directories that are visible and where they should be obtained from with git.
 .PP
 The basic structure of a manifest is a bare Git repository holding a single
-`default.xml` XML file in the top level directory.
+`manifest.xml` XML file in the top level directory.
 .PP
 Manifests are inherently version controlled, since they are kept within a Git
 repository. Updates to manifests are automatically obtained by clients during
@@ -94,7 +94,7 @@ repository. Updates to manifests are automatically obtained by clients during
 .PP
 XML File Format
 .PP
-A manifest XML file (e.g. `default.xml`) roughly conforms to the following DTD:
+A manifest XML file (e.g. `manifest.xml`) roughly conforms to the following DTD:
 .PP
 ```xml <!DOCTYPE manifest [
 .TP
@@ -364,7 +364,7 @@ Projects from a submanifest and its submanifests are added to the
 submanifest::path:<path_prefix> group.
 .PP
 Attribute `manifest\-name`: The manifest filename in the manifest project. If not
-supplied, `default.xml` is used.
+supplied, `manifest.xml` is used.
 .PP
 Attribute `revision`: Name of a Git branch (e.g. "main" or "refs/heads/main"),
 tag (e.g. "refs/tags/stable"), or a commit hash. If not supplied, `name` is
